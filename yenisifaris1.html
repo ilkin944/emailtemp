@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            background-color: #e5014b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @font-face {
+            font-family: montserrat;
+            src: url(./assets/Montserrat-Regular.ttf);
+        }
+
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'montserrat', sans-serif;
+        }
+
+        .main-content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 70%;
+            max-width: 600px;
+            height: 100%;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-header {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 100%;
+        }
+
+        .company-logo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .company-logo img {
+            max-width: 10rem;
+        }
+
+        .greeting {
+            text-align: center;
+            font-size: 2.75rem;
+            line-height: 4.375rem;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .description {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.225rem;
+            line-height: 1.5rem;
+            letter-spacing: normal;
+            color: #FFFFFF;
+        }
+
+        .card-body {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 40px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .invoice {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .invoice-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+        }
+
+        .invoice-general-information {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .invoice-general-information span {
+            margin-bottom: 20px;
+        }
+
+        .invoice-body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .total-count {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .total-count p {
+            line-height: 1.9;
+        }
+
+        .products {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .product-image {
+            width: 150px;
+            height: 100px;
+            text-align: left;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: left;
+            border-radius: 10px;
+        }
+
+        .product-name {
+            width: 40%;
+        }
+
+        .product-total {
+            width: 20%;
+
+        }
+
+        .invoice-footer {
+            width: 100%;
+        }
+
+        .divider {
+            width: 100%;
+            height: 2px;
+            background-color: beige;
+            margin: 25px 0;
+        }
+
+        .invoice-footer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .invoice-footer>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .card-footer {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .card-footer p {
+            color: white;
+        }
+
+        @media screen and (max-width:768px) {
+            .container {
+                width: 80%;
+            }
+
+            .invoice-header,
+            .products,
+            .invoice-footer {
+                flex-direction: column;
+            }
+
+            .invoice-header>div,
+            .products>div,
+            .invoice-footer>div {
+                width: 100%;
+                justify-content: flex-start;
+                align-items: flex-start;
+                text-align: left;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="company-logo">
+                            <a href="https://avon.net.az" target="_blank">
+                                <img src="./assets/Avon_RGB_Logo.png" alt="Avon Logo">
+                            </a>
+                        </div>
+                        <div class="greeting">
+                            <h2>Salam {ad, soyad}</h2>
+                            <p>sifarişiniz hazırlanız</p>
+                        </div>
+                        <div class="description">
+                            <p>Sifariş etdiyiniz məhsullar hazırda əməkdaşlarımız tərəfindən qəbul olunub ən qısa
+                                müddətdə sizə çatdıracaqlar</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="invoice">
+                            <div class="invoice-header">
+                                <div class="invoice-general-information">
+                                    <span class="invoice-number">Qəbz: {invoice number}</span>
+                                    <span class="buyer-info">{ad, soyad}</span>
+                                    <span class="delivery-address">{ev, kuce, erazi, seher, poct kodu}</span>
+                                </div>
+                                <div class="invoice-total">
+                                    <p>Sizin sifarişinizin toplam miqdarı</p>
+                                    <span>{miqdar}</span>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="invoice-body">
+                                <div class="total-count">
+                                    <p>Məhsul sayı: {umumi mehsul sayi}</p>
+                                    <p>Məhsulların ümumi çəkisi: {umumi mehsul çəkisi}</p>
+                                </div>
+                                <div class="products">
+                                    <div class="product-image">
+                                        <img src="./assets/Blueberry_Coffee_Donut.png" alt="">
+                                    </div>
+                                    <div class="product-name">
+                                        <span>Adı: {ad}</span>
+                                    </div>
+                                    <div class="product-total">
+                                        <span>Qiyməti: {məhsulun 1 ədədin qiyməti}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="invoice-footer">
+                                <div class="subtotal">
+                                    <span>Cəmi</span>
+                                    <span>{Cəmi}</span>
+                                </div>
+                                <div class="discount">
+                                    <span>Endirim miqdarı </span>
+                                    <span>{Endirim miqdarı}</span>
+                                </div>
+                                <div class="total">
+                                    <span>Yekun ödənilən</span>
+                                    <span>{Yekun ödənilən}</span>
+                                </div>
+                                <div class="order-date">
+                                    <span>{Sifariş tarixi : {gün.ay.il}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p>Təşəkkürlər ❤️ </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
